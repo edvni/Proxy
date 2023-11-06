@@ -14,6 +14,9 @@ public class ProxyImage implements Image{
     }
 
     public void showData() {
-        System.out.println("Showing data: " + fileName);
+        if (realImage == null) {
+            realImage = new RealImage(fileName);
+        }
+        realImage.showData();
     }
 }
